@@ -672,6 +672,7 @@ textarea {
   display: flex;
   gap: 16px;
   padding: 16px;
+    align-items: center;
 }
 
 .step span {
