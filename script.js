@@ -7,6 +7,7 @@ const hero = document.querySelector(".hero");
 const contactSection = document.getElementById("contact");
 const leadModal = document.getElementById("lead-modal");
 const modalCloseElements = document.querySelectorAll("[data-close-modal='true']");
+const contactLinks = document.querySelectorAll(".contact-links a");
 
 const TELEGRAM_USERNAME = "directviktor";
 const SUCCESS_TEXT =
@@ -116,4 +117,13 @@ if (mobilePhoneCta && hero && contactSection) {
   heroObserver.observe(hero);
   contactObserver.observe(contactSection);
   updateMobileCta();
+}
+
+if (contactLinks.length) {
+    contactLinks.forEach((link) => {
+        link.setAttribute("draggable", "false");
+        link.addEventListener("dragstart", (event) => {
+            event.preventDefault();
+        });
+    });
 }

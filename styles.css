@@ -712,6 +712,9 @@ textarea {
 .contact-links a {
   display: block;
   padding: 20px;
+    user-select: text;
+    -webkit-user-select: text;
+    -webkit-user-drag: none;
 }
 
 .contact-links span {
